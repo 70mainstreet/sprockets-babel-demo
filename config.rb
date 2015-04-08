@@ -18,7 +18,8 @@ sprockets.append_path File.join root, 'node_modules'
 class ::Sprockets::Babel::Template
   def prepare
     @options = @options.merge({
-      sourceMaps: 'inline'
+      sourceMaps: 'inline',
+      loose: %w{es6.classes es6.modules} # loose mode enables better IE <= 10 compatibility
     })
   end
 end
