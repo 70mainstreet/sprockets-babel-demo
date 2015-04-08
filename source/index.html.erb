@@ -6,7 +6,12 @@
   </head>
   <body>
     <h1>Test</h1>
+
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag 'vendor-ie8' %>
+    <![endif]-->
     <%= javascript_include_tag 'vendor' %>
     <%= javascript_include_tag 'app' %>
+
   </body>
 </html>

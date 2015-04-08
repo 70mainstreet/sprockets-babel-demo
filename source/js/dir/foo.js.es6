@@ -5,7 +5,7 @@ export default class Foo {
   }
 
   foo() {
-    alert(this._foo);
+    document.write('<p>' + this._foo + '</p>');
   }
 
 }
