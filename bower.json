@@ -1,6 +1,5 @@
 {
-  "name": "hoopla-website",
-  "version": "0.0.1",
+  "name": "sprockets-babel-test",
   "dependencies": {
     "es5-shim": "~4.1.0"
   }

@@ -1,27 +1,15 @@
-# Compass
 set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'images'
 
-# Asset Uri (with trailing slash)
-@http_prefix = '/'
-if ENV['HTTP_PREFIX']
-  @http_prefix = ENV['HTTP_PREFIX']
-end
-set :http_prefix, @http_prefix
-
-# Make Bower files available to Sprockets
+# Make Bower & NPM files available to Sprockets
 sprockets.append_path File.join root, 'bower_components'
 sprockets.append_path File.join root, 'node_modules'
 
-# Tweak Babel options
-class ::Sprockets::Babel::Template
-  def prepare
-    @options = @options.merge({
-      sourceMaps: 'inline',
-      loose: %w{es6.classes es6.modules} # loose mode enables better IE <= 10 compatibility
-    })
-  end
+# Configure Babel
+require 'babel'
+::Babel.options do |o|
+  o[:loose] = %w{es6.classes es6.modules} # loose mode enables better IE <= 10 compatibility
 end
 
 # Output .js.es6 files as .js
