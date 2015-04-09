@@ -1,5 +1,5 @@
 {
-  "name": "sprockets-babel-test",
+  "name": "sprockets-babel-demo",
   "dependencies": {
     "es5-shim": "~4.1.0"
   }
