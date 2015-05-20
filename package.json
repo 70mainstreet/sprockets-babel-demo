@@ -2,6 +2,6 @@
   "name": "sprockets-babel-demo",
   "description": "Sprockets Babel Demo Project",
   "dependencies": {
-    "babel-core": "5.0.12"
+    "babel-core": "5.4.3"
   }
 }
