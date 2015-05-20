@@ -1,6 +1,6 @@
 {
   "name": "sprockets-babel-demo",
   "dependencies": {
-    "es5-shim": "~4.1.0"
+    "es5-shim": "~4.1.1"
   }
 }
